@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
+#include <stdbool.h>
 
 // 打印int数组
 void PrintIntArray(int *a, int size);
@@ -224,6 +225,19 @@ int trap(int* height, int heightSize){
         }
     }
     return ans;
+}
+
+/* 141、环形链表 */
+//快慢指针
+bool hasCycle(struct ListNode *head) {
+    struct ListNode *fast = head;
+    struct ListNode *slow = head;
+    while (fast && fast->next) {
+        fast = fast->next->next;
+        slow = slow->next;
+        if (fast == slow) return true;
+    }
+    return false;
 }
 
 /* 工具方法 */

@@ -43,7 +43,7 @@ class BinaryTree {
         return res
     }
     /// 迭代
-    func preorderTraversal11(_ root: TreeNode?) -> [Int] {
+    func inorderTraversal11(_ root: TreeNode?) -> [Int] {
         var stack = [TreeNode]()
         var res = [Int]()
         var node = root
@@ -58,25 +58,6 @@ class BinaryTree {
                 res.append(node!.val)
                 //右边节点
                 node = node?.right
-            }
-        }
-        return res
-    }
-    /// 迭代
-    func preorderTraversal12(_ root: TreeNode?) -> [Int] {
-        var res = [Int]()
-        guard let root = root else {
-            return res
-        }
-        var stack = [root]
-        while !stack.isEmpty {
-            let node = stack.popLast()
-            res.append(node!.val)
-            if node!.right != nil {
-                stack.append(node!.right!)
-            }
-            if node!.left != nil {
-                stack.append(node!.left!)
             }
         }
         return res
@@ -148,6 +129,26 @@ class BinaryTree {
         return res
     }
     
+    /// 迭代
+    func preorderTraversal11(_ root: TreeNode?) -> [Int] {
+        var res = [Int]()
+        guard let root = root else {
+            return res
+        }
+        var stack = [root]
+        while !stack.isEmpty {
+            let node = stack.popLast()
+            res.append(node!.val)
+            if node!.right != nil {
+                stack.append(node!.right!)
+            }
+            if node!.left != nil {
+                stack.append(node!.left!)
+            }
+        }
+        return res
+    }
+    
     /* 后序遍历 */
     
     /// 递归
@@ -163,7 +164,7 @@ class BinaryTree {
     }
     
     /// 迭代
-    func postorderTraversal10(_ root: TreeNode?) -> [Int] {
+    func postorderTraversal01(_ root: TreeNode?) -> [Int] {
         var stack = [TreeNode]()
         var res = [Int]()
         var node = root

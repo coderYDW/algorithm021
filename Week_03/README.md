@@ -4,6 +4,8 @@
 
 第三周的学习有些不太好，递归逻辑老是梳理不对，搞不懂分治和回溯咋回事，好难！！！
 
+刷题代码好难懂啊！！！
+
 ## 递归
 #### 一、什么是递归？
 1. 递归是一种非常高效、简洁的编码技巧，一种应用非常广泛的算法，比如DFS深度优先搜索、前中后序二叉树遍历等都是使用递归。
@@ -30,7 +32,7 @@ f(n)=n*f(n-1);
 1. 递归终止条件 recursion terminator
 2. 处理当前层 process logic in current level
 3. 下探到下一层 drill down
-4. 清理当前层 reverse the current level status needed
+4. 清理当前层 reverse the current level status if needed
 
 
 ##### 递归思维要点
@@ -49,6 +51,13 @@ f(n)=n*f(n-1);
 笼统的讲，所有的递归代码都可以改写为迭代循环的非递归写法。如何做？抽象出递推公式、初始值和边界条件，然后用迭代循环实现。
 
 ## 分治（分而治之）
+
+##### 分治的代码模板
+1. 递归终止条件 recursion terminator
+2. 准备数据拆分问题 prepare data
+3. 递归处理子问题 conquer subproblems
+4. 合并子结果	process and generate the final result
+5. 清理当前层 reverse the current level status
 
 分治是一种处理问题的思想，多适合用递归来实现。
 

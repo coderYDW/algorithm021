@@ -27,10 +27,11 @@ f(n)=n*f(n-1);
 #### 四、如何实现递归？
 
 ##### 递归的代码模板
-1. 递归终止条件
-2. 处理当前层
-3. 下探到下一层
-4. 清理当前层
+1. 递归终止条件 recursion terminator
+2. 处理当前层 process logic in current level
+3. 下探到下一层 drill down
+4. 清理当前层 reverse the current level status needed
+
 
 ##### 递归思维要点
 
